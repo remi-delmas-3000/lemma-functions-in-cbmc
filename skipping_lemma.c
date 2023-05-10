@@ -1,9 +1,8 @@
+#include "skipping_lemma.h"
 #include <stdbool.h>
 #include <stdlib.h>
-#include "skipping_lemma.h"
 
-void skipping_lemma(int *a, int a_len, int j)
-{
+void skipping_lemma(int *a, int a_len, int j) {
   int i = j;
   while ((i < a_len) && (i < j + a[j]))
     // clang-format off
@@ -14,6 +13,7 @@ void skipping_lemma(int *a, int a_len, int j)
     __CPROVER_decreases(-i)
     // clang-format on
     {
+      // proof by induction on i
       i = i + 1;
     }
 }

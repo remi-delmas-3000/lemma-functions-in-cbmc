@@ -1,0 +1,5 @@
+#ifndef CONSTANTS_H_DEFINED
+#define CONSTANTS_H_DEFINED
+#define MAX_A_LEN 1000
+#define MAX_A_VAL 1000
+#endif
